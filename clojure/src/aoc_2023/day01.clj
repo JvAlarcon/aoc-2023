@@ -2,14 +2,12 @@
   (:require [clojure.java.io :as io])
   (:require [clojure.string :as str]))
 
-;The newly-improved calibration document consists of lines of text;
+; The newly-improved calibration document consists of lines of text;
 ; each line originally contained a specific calibration value
 ; that the Elves now need to recover.
 ; On each line, the calibration value can be found by combining the
 ; first digit and the last digit (in that order) to form a single
 ; two-digit number.
-
-(def input (.getPath (io/resource "day01-input.txt")))
 
 (defn parse-int [s]
   (Integer/parseInt s))
@@ -38,4 +36,5 @@
          (map parse-int)
          (reduce +)
          (println))))
+
 (calibrate)

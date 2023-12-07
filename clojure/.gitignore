@@ -1,6 +1,8 @@
 /target
 /classes
 /checkouts
+/doc
+/test
 profiles.clj
 pom.xml
 pom.xml.asc
@@ -11,6 +13,9 @@ pom.xml.asc
 /.prepl-port
 .hgignore
 .hg/
+
+CHANGELOG.md
+README.md
 
 ### IntelliJ IDEA ###
 .idea
