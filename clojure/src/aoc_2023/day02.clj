@@ -40,6 +40,7 @@
 
 (defn is-valid? [cube-color limit]
   (<= cube-color limit))
+
 (defn set-is-valid? [red green blue]
   (let [is-red-valid? (is-valid? red red-cubes-limit)
         is-green-valid? (is-valid? green green-cubes-limit)
@@ -47,6 +48,7 @@
     (and is-red-valid?
          is-green-valid?
          is-blue-valid?)))
+
 (defn find-valid-sets [{id :game
                         sets :sets}]
   (let [red (sum-cubes :red sets)
@@ -64,6 +66,7 @@
        (reduce +)))
 
 (defn find-valid-games [games]
+  (pprint games)
   (->> games
        (map find-valid-sets)
        (remove nil?)
