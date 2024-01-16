@@ -1,5 +1,4 @@
 (ns aoc-2023.day04
-  (:use [clojure pprint])
   (:require [clojure.set :as c.set]))
 
 (def scratchcards [{:id 1,
